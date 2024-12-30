@@ -267,21 +267,20 @@
       },
       "host": {
         "properties": {
-          "memory": {
+          "cpu": {
             "properties": {
-              "free": {
+              "cores": {
                 "type": "long"
               },
-              "total": {
+              "name": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "speed": {
                 "type": "long"
               },
-              "used": {
-                "properties": {
-                  "percentage": {
-                    "type": "long"
-                  }
-                },
-                "type": "object"
+              "usage": {
+                "type": "float"
               }
             },
             "type": "object"
